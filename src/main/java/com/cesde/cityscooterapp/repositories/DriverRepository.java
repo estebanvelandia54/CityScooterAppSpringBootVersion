@@ -22,6 +22,12 @@ public class DriverRepository {
             drivers.add(driver);
             return driver;
         }
+        public Driver findById(int id){
+            return drivers.stream()
+                    .filter(d -> d.getId() == id)
+                    .findFirst()
+                    .orElse(null);
+        }
 
 
 

@@ -31,6 +31,8 @@ public class DriverServiceImp implements DriverService {
 
     @Override
     public Optional<Driver> getDriverById(int id) {
-        return Optional.empty();
+        Driver driver = driverRepository.findById(id);
+        return Optional.ofNullable(driver);
     }
+
 }
